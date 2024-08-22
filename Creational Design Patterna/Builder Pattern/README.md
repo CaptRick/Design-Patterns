@@ -1,0 +1,2 @@
+# Builder Pattern
+The builder pattern is a design pattern that provides a flexible solution to various object creation problems in object-oriented programming. The builder pattern separates the construction of a complex object from its representation.

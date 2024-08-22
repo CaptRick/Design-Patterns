@@ -1,3 +1,5 @@
+const axios = require('axios');
+
 function getUsers() {
   return getFetch('https://jsonplaceholder.typicode.com/users')
 }

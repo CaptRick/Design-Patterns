@@ -1,0 +1,23 @@
+{
+  "name": "design-patterns",
+  "version": "1.0.0",
+  "description": "As a good JavaScript developer, you strive to write clean, healthy, and maintainable code. While you solve interesting and unique challenges, you’ve likely found that you’re often writing code that looks similar to the code for an entirely different problem you’ve handled before. You may not know it, but you’ve used a design pattern.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaptRick/Design-Patterns.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CaptRick/Design-Patterns/issues"
+  },
+  "homepage": "https://github.com/CaptRick/Design-Patterns#readme",
+  "dependencies": {
+    "axios": "^1.7.4"
+  }
+}

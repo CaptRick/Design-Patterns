@@ -1,0 +1,14 @@
+{
+  "name": "iterator-pattern",
+  "version": "1.0.0",
+  "description": "The iterator pattern allows us access to the elements in a collection without exposing its underlying representation.",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

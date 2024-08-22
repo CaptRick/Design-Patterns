@@ -1,49 +1,38 @@
-class User {
+// Null Object Design Pattern will remove the need of having lots of checks for null throughout your code. 
+// Let’s rewrite the above code using this pattern.
+
+// At first, we create a null wrapper class for the Person class 
+// and later we instantiate the null class if the person is not found instead of returning null.
+class Person {
   constructor(id, name) {
     this.id = id
-    this.name = name
-  }
-
-  hasAccess() {
-    return this.name === 'Bob'
+    this.name = name;
   }
 }
 
-class NullUser {
+// Null person wrapper
+class NullPerson {
   constructor() {
-    this.id = -1
-    this.name = 'Guest'
-  }
-
-  hasAccess() {
-    return false
+    this.id = null
+    this.name = 'Guest';
   }
 }
 
-const users = [
-  new User(1, 'Bob'),
-  new User(2, 'John')
+const persons = [
+  new Person(1, "John Doe"),
+  new Person(2, "John Papa")
 ]
 
-function getUser(id) {
-  const user = users.find(user => user.id === id)
-  /*
-    We are now checking if the user is null before returning, and instead returning a NullUser object if the user is null. This means that we no longer need to check for null users later in the code and can treat all users that are returned from this function the same whether they exist or not.
-  */
-  if (user == null) {
-    return new NullUser()
-  } else {
-    return user
-  }
+function findPerson(id) {
+  const person = persons.find(person => person.id === id)
+  if (person)
+    return person
+  else
+    return new NullPerson()
 }
 
-function printUser(id) {
-  const user = getUser(id)
-  console.log('Hello ' + user.name)
+let personOne = findPerson(1)
+console.log("Welcome, " + personOne.name)
 
-  if (user.hasAccess()) {
-    console.log('You have access')
-  } else {
-    console.log('You are not allowed here')
-  }
-}
+let personTwo = findPerson(99)
+console.log("Welcome, " + personTwo.name)
